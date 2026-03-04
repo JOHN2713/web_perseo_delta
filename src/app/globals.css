@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-perseo-orange: #f97316;
+  --color-perseo-pink: #e91e63;
+  --color-perseo-dark: #080c1a;
+  --color-perseo-header: #0d0d0d;
+  --color-perseo-green: #25d366;
+}
+
+:root {
+  color-scheme: dark light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+/* Gradient utility for hero CTA button */
+.btn-gradient-cta {
+  background: linear-gradient(90deg, #e91e63 0%, #f97316 100%);
+}
+.btn-gradient-cta:hover {
+  background: linear-gradient(90deg, #c2185b 0%, #ea6c00 100%);
+}
+
+/* WhatsApp FAB pulse ring */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.45); }
+  50%       { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+}
+.wa-pulse { animation: wa-pulse 2s infinite; }

@@ -1,0 +1,11 @@
+{
+  "main": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Perseo Web", "href": "/perseo-web" },
+    { "label": "Perseo PC", "href": "/perseo-pc" },
+    { "label": "Facturito", "href": "/facturito" },
+    { "label": "Firmas", "href": "/firmas" },
+    { "label": "Capacitaciones", "href": "/capacitaciones" },
+    { "label": "Servicio Técnico", "href": "/servicio-tecnico" }
+  ]
+}
