@@ -31,7 +31,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-3">
           {/* WhatsApp */}
           <a
-            href="https://wa.me/593963095699"
+            href="https://wa.me/593999747608"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"

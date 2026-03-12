@@ -15,7 +15,7 @@ const FOOTER_COLS = [
     heading: "CONTACTO",
     links: [
       { label: "info@perseo.ec", href: "mailto:info@perseo.ec" },
-      { label: "096 309 5699", href: "https://wa.me/593963095699" },
+      { label: "099 974 7608", href: "https://wa.me/593999747608" },
       { label: "Soporte Técnico", href: "/servicio-tecnico" },
     ],
   },
@@ -39,7 +39,7 @@ const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/sistemacontableperseoec/", icon: <InstagramIcon /> },
   { label: "LinkedIn",  href: "https://www.linkedin.com/company/sistemacontableperseoec/", icon: <LinkedInIcon /> },
   { label: "YouTube",   href: "https://www.youtube.com/@sistemacontableperseoec", icon: <YouTubeIcon /> },
-  { label: "WhatsApp",  href: "https://wa.me/593963095699", icon: <WhatsAppIcon /> },
+  { label: "WhatsApp",  href: "https://wa.me/593999747608", icon: <WhatsAppIcon /> },
 ];
 
 export default function SiteFooter() {

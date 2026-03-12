@@ -246,7 +246,7 @@ export default function ServicioTecnicoPage() {
                 Nuestro equipo de soporte está listo para ayudarte con cualquier consulta específica.
               </p>
               <a
-                href="https://wa.me/593958898180?text=Hola,%20necesito%20soporte%20técnico"
+                href="https://wa.me/593999747608?text=Hola,%20necesito%20soporte%20técnico"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-6 py-3 rounded-xl transition-colors"
