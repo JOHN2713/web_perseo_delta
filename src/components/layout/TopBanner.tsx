@@ -86,7 +86,7 @@ export default function TopBanner() {
 
         {/* CTA Button */}
         <Link
-          href="/agendar-demo"
+          href="/#contacto"
           className="flex items-center gap-2 rounded-md bg-gradient-to-r from-[#ff6b35] to-[#f97316] px-6 py-2.5 text-sm font-bold uppercase text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
         >
           <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">

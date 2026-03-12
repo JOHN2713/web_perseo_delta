@@ -42,7 +42,7 @@ export default function SiteHeader() {
 
           {/* Demo en Vivo */}
           <Link
-            href="/agendar-demo"
+            href="/#contacto"
             className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ff6b35] to-[#f97316] px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
           >
             <PlayIcon className="h-4 w-4" />
@@ -67,7 +67,7 @@ export default function SiteHeader() {
         {/* Row 1: CTAs + WhatsApp + Cart */}
         <div className="flex items-center justify-center gap-2 px-4 py-2.5">
           <Link
-            href="/agendar-demo"
+            href="/#contacto"
             className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#ff6b35] to-[#f97316] px-5 py-2 text-xs font-semibold text-white shadow-md"
           >
             <PlayIcon className="h-3.5 w-3.5" />

@@ -2,7 +2,7 @@
   "hero": {
     "title": "La contabilidad que hace crecer tu negocio",
     "subtitle": "Base de contenido para maquetar con las capturas de referencia.",
-    "primaryCta": { "label": "Demo por 15 días", "href": "/agendar-demo" },
+    "primaryCta": { "label": "Demo por 15 días", "href": "/#contacto" },
     "secondaryCta": { "label": "Contactar por WhatsApp", "href": "https://wa.me/593999747608" }
   }
 }
