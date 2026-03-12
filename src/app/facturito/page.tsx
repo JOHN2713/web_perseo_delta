@@ -21,7 +21,7 @@ export default function FacturitoPage() {
         { text: "App Movil", included: true },
       ],
       popular: false,
-      buttonText: "Agregar al carrito",
+      buttonText: "Más información",
       buttonClass: "bg-black hover:bg-gray-800 text-white",
     },
     {
@@ -38,7 +38,7 @@ export default function FacturitoPage() {
         { text: "App Movil", included: true },
       ],
       popular: false,
-      buttonText: "Agregar al carrito",
+      buttonText: "Más información",
       buttonClass: "bg-black hover:bg-gray-800 text-white",
     },
     {
@@ -55,7 +55,7 @@ export default function FacturitoPage() {
         { text: "App Movil", included: true },
       ],
       popular: true,
-      buttonText: "Agregar al carrito",
+      buttonText: "Más información",
       buttonClass: "bg-purple-600 hover:bg-purple-700 text-white",
     },
   ];
@@ -144,11 +144,15 @@ export default function FacturitoPage() {
                     )}
                   </div>
 
-                  <button
+                  <a
+                    href="/#contacto"
                     className={`w-full py-3 rounded-xl font-semibold transition-colors mb-8 flex items-center justify-center gap-2 ${plan.buttonClass}`}
                   >
-                    🛒 {plan.buttonText}
-                  </button>
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {plan.buttonText}
+                  </a>
 
                   <ul className="space-y-4">
                     {plan.features.map((feature, idx) => (

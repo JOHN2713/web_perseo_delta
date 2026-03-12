@@ -351,7 +351,8 @@ export default function PerseoPcPage() {
                   </div>
 
                   {/* CTA Button */}
-                  <button
+                  <a
+                    href="/#contacto"
                     className={`w-full py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 mb-6 transition-all ${
                       plan.buttonVariant === "secondary"
                         ? "bg-orange-600 text-white hover:bg-orange-700 shadow-lg"
@@ -368,11 +369,11 @@ export default function PerseoPcPage() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    Agregar al carrito
-                  </button>
+                    Más información
+                  </a>
 
                   {/* Features */}
                   <ul className="space-y-2 text-sm">
@@ -742,12 +743,12 @@ export default function PerseoPcPage() {
                       Más Iva / {cloudBillingType === "pvp" ? "Anual" : "Renovación"}
                     </p>
                   </div>
-                  <button className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg bg-gray-800 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-900">
+                  <a href="/#contacto" className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg bg-gray-800 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-900">
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    Agregar al carrito
-                  </button>
+                    Más información
+                  </a>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start gap-2">
                       <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -786,12 +787,12 @@ export default function PerseoPcPage() {
                       Más Iva / {cloudBillingType === "pvp" ? "Anual" : "Renovación"}
                     </p>
                   </div>
-                  <button className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg bg-gray-800 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-900">
+                  <a href="/#contacto" className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg bg-gray-800 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-900">
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    Agregar al carrito
-                  </button>
+                    Más información
+                  </a>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start gap-2">
                       <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -833,12 +834,12 @@ export default function PerseoPcPage() {
                       Más Iva / {cloudBillingType === "pvp" ? "Anual" : "Renovación"}
                     </p>
                   </div>
-                  <button className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-600 py-2.5 text-sm font-semibold text-white transition-all hover:bg-orange-700">
+                  <a href="/#contacto" className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg bg-orange-600 py-2.5 text-sm font-semibold text-white transition-all hover:bg-orange-700">
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    Agregar al carrito
-                  </button>
+                    Más información
+                  </a>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start gap-2">
                       <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

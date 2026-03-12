@@ -112,7 +112,8 @@ export default function FirmasPage() {
                 </div>
 
                 {/* Button */}
-                <button
+                <a
+                  href="/#contacto"
                   className={`w-full py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 group ${
                     plan.popular
                       ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/30"
@@ -120,14 +121,17 @@ export default function FirmasPage() {
                   }`}
                 >
                   <span className="flex items-center gap-2">
-                    🛒 Agregar al carrito
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Más información
                   </span>
                   <ArrowRight
                     className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${
                       plan.popular ? "opacity-100" : "opacity-0"
                     }`}
                   />
-                </button>
+                </a>
               </div>
             ))}
           </div>

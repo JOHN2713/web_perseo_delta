@@ -1,29 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 
 export default function ContactFormSection() {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    celular: "",
-    correo: "",
-  });
+  useEffect(() => {
+    // Load Bitrix24 form script for inline form
+    const script = document.createElement('script');
+    script.async = true;
+    script.innerHTML = `
+      (function(w,d,u){
+        var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+        var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+      })(window,document,'https://cdn.bitrix24.es/b9233699/crm/form/loader_225.js');
+    `;
+    document.body.appendChild(script);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aquí iría la lógica para enviar el formulario
-    console.log("Formulario enviado:", formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-20">
+    <section id="contacto" className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           {/* Título */}
@@ -38,58 +38,14 @@ export default function ContactFormSection() {
             Déjanos tus datos y te contactaremos a la brevedad
           </p>
 
-          {/* Formulario */}
-          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
-            {/* Campo Nombre */}
-            <div className="relative">
-              <input
-                type="text"
-                name="nombre"
-                id="nombre"
-                value={formData.nombre}
-                onChange={handleChange}
-                required
-                placeholder="Nombre completo"
-                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder-gray-500 transition-all focus:border-[#e91e63] focus:outline-none focus:ring-2 focus:ring-[#e91e63]/20"
-              />
-            </div>
-
-            {/* Campo Celular */}
-            <div className="relative">
-              <input
-                type="tel"
-                name="celular"
-                id="celular"
-                value={formData.celular}
-                onChange={handleChange}
-                required
-                placeholder="Celular"
-                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder-gray-500 transition-all focus:border-[#e91e63] focus:outline-none focus:ring-2 focus:ring-[#e91e63]/20"
-              />
-            </div>
-
-            {/* Campo Correo */}
-            <div className="relative">
-              <input
-                type="email"
-                name="correo"
-                id="correo"
-                value={formData.correo}
-                onChange={handleChange}
-                required
-                placeholder="Correo electrónico"
-                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder-gray-500 transition-all focus:border-[#e91e63] focus:outline-none focus:ring-2 focus:ring-[#e91e63]/20"
-              />
-            </div>
-
-            {/* Botón CTA */}
-            <button
-              type="submit"
-              className="mt-4 w-full rounded-full bg-gradient-to-r from-[#e91e63] to-[#f97316] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+          {/* Formulario Bitrix24 Inline */}
+          <div className="mt-10">
+            <script 
+              data-b24-form="inline/225/ewxr65" 
+              data-skip-moving="true"
             >
-              Necesito más información
-            </button>
-          </form>
+            </script>
+          </div>
 
           {/* Mensaje adicional */}
           <p className="mt-6 text-sm text-gray-500">

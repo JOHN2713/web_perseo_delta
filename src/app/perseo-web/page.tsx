@@ -733,16 +733,16 @@ export default function PerseoWebPage() {
                     <p className="text-xs text-gray-500">
                       Más Iva / {billingPeriod === "monthly" ? "Mensual" : "Anual"}
                     </p>
-                    <button className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white transition-all ${
+                    <a href="/#contacto" className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white transition-all ${
                       plan.id === "comercial"
                         ? "bg-blue-600 hover:bg-blue-700"
                         : "bg-[#1a1a1a] hover:bg-gray-900"
                     }`}>
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      Agregar al carrito
-                    </button>
+                      Más información
+                    </a>
                   </div>
                 )}
 
