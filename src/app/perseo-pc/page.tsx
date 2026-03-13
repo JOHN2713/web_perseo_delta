@@ -38,7 +38,7 @@ const ModuleCategory: React.FC<ModuleCategoryProps> = ({ title, features }) => {
       {/* Category Header */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full px-6 py-3 text-left transition-colors hover:bg-gray-50"
+        className="w-full px-4 py-3 text-left transition-colors hover:bg-gray-50 sm:px-6"
       >
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-bold text-orange-600">{title}</h3>
@@ -61,33 +61,33 @@ const ModuleCategory: React.FC<ModuleCategoryProps> = ({ title, features }) => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="grid grid-cols-6 gap-4 border-t border-gray-100 px-6 py-2.5 hover:bg-gray-50"
+              className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-2 border-t border-gray-100 px-4 py-2.5 hover:bg-gray-50 sm:grid-cols-6 sm:gap-4 sm:px-6"
             >
-              <div className="col-span-2 text-xs text-gray-700">{feature.name}</div>
+              <div className="text-[11px] text-gray-700 sm:col-span-2 sm:text-xs">{feature.name}</div>
               <div className="flex justify-center">
                 {feature.fact && (
-                  <svg className="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-3.5 w-3.5 text-orange-500 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 )}
               </div>
               <div className="flex justify-center">
                 {feature.control && (
-                  <svg className="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-3.5 w-3.5 text-orange-500 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 )}
               </div>
               <div className="flex justify-center">
                 {feature.com && (
-                  <svg className="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-3.5 w-3.5 text-orange-500 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 )}
               </div>
               <div className="flex justify-center">
                 {feature.prime && (
-                  <svg className="h-4 w-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-3.5 w-3.5 text-orange-500 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 )}
@@ -214,7 +214,7 @@ export default function PerseoPcPage() {
   return (
     <div className="bg-gradient-to-br from-orange-900 via-orange-800 to-orange-900 min-h-screen">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+      <div className="mx-auto max-w-[95%] px-2 pt-20 pb-12 sm:px-4 lg:max-w-[1600px]">
         <div className="bg-gradient-to-r from-orange-600 to-orange-700 rounded-t-2xl p-12 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Ficha Técnica PERSEO PC
@@ -284,8 +284,8 @@ export default function PerseoPcPage() {
 
         {/* Plans Grid */}
         {activeTab === "servidor" && (
-          <div className="bg-white rounded-b-2xl p-8">
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white rounded-b-2xl p-4 sm:p-8">
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
               {PLANS.map((plan) => (
                 <div
                   key={plan.id}
@@ -518,8 +518,8 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Modules Comparison Section */}
-            <div className="bg-white px-8 pb-8 pt-6">
-              <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+            <div className="bg-white px-2 pb-8 pt-6 sm:px-4">
+              <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
                 {/* Header */}
                 <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-6 py-4 text-white">
                   <div className="flex items-center gap-3">
@@ -535,22 +535,22 @@ export default function PerseoPcPage() {
 
                 {/* Table Header */}
                 <div className="sticky top-0 z-10 border-b border-gray-200 bg-gray-50">
-                  <div className="grid grid-cols-6 gap-4 px-6 py-3">
-                    <div className="col-span-2 text-xs font-semibold uppercase text-gray-500">Detalle</div>
+                  <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-2 px-4 py-3 sm:grid-cols-6 sm:gap-4 sm:px-6">
+                    <div className="text-xs font-semibold uppercase text-gray-500 sm:col-span-2">Detalle</div>
                     <div className="text-center">
-                      <div className="text-xs font-semibold text-orange-600">FACT.</div>
-                      <div className="mt-0.5 text-xs text-gray-600">$310</div>
+                      <div className="text-[10px] font-semibold text-orange-600 sm:text-xs">FACT.</div>
+                      <div className="mt-0.5 text-[9px] text-gray-600 sm:text-xs">${billingType === "renta" ? "310" : "700"}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xs font-semibold text-orange-600">CONTROL</div>
-                      <div className="mt-0.5 text-xs text-gray-600">$560</div>
+                      <div className="text-[10px] font-semibold text-orange-600 sm:text-xs">CONTROL</div>
+                      <div className="mt-0.5 text-[9px] text-gray-600 sm:text-xs">${billingType === "renta" ? "560" : "1400"}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xs font-semibold text-orange-600">COM.</div>
-                      <div className="mt-0.5 text-xs text-gray-600">$660</div>
+                      <div className="text-[10px] font-semibold text-orange-600 sm:text-xs">COM.</div>
+                      <div className="mt-0.5 text-[9px] text-gray-600 sm:text-xs">${billingType === "renta" ? "660" : "2000"}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xs font-semibold uppercase text-orange-600">PRIME</div>
+                      <div className="text-[10px] font-semibold uppercase text-orange-600 sm:text-xs">PRIME</div>
                     </div>
                   </div>
                 </div>
@@ -671,7 +671,7 @@ export default function PerseoPcPage() {
         {activeTab === "nube" && (
           <div className="bg-white rounded-b-2xl">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-8 py-6 text-white">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-6 text-white sm:px-8">
               <div className="flex items-center gap-3">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -684,7 +684,7 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Billing Toggle */}
-            <div className="bg-white px-8 py-6">
+            <div className="bg-white px-2 py-6 sm:px-4">
               <div className="flex justify-center">
                 <div className="inline-flex rounded-full bg-gray-200 p-1">
                   <button
@@ -712,7 +712,7 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Company Section */}
-            <div className="px-8 pb-8">
+            <div className="px-2 pb-8 sm:px-4">
               <div className="mb-6 flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600">
                   <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -864,14 +864,14 @@ export default function PerseoPcPage() {
               </div>
 
               {/* Download Buttons */}
-              <div className="mt-8 flex justify-center gap-4">
-                <button className="flex items-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
+              <div className="mt-8 flex flex-col justify-center gap-3 px-4 sm:flex-row sm:gap-4">
+                <button className="flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Descargar Ficha Técnica
                 </button>
-                <button className="flex items-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
+                <button className="flex items-center justify-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -886,7 +886,7 @@ export default function PerseoPcPage() {
         {activeTab === "comparacion" && (
           <div className="bg-white rounded-b-2xl">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-8 py-6 text-white">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-6 text-white sm:px-8">
               <div className="flex items-center gap-3">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -899,7 +899,7 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Comparison Table */}
-            <div className="px-8 py-8">
+            <div className="px-2 py-8 sm:px-4">
               <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
                 {/* Table Header */}
                 <div className="bg-gray-50 border-b border-gray-200">
@@ -994,14 +994,14 @@ export default function PerseoPcPage() {
               </div>
 
               {/* Download Buttons */}
-              <div className="mt-8 flex justify-center gap-4">
-                <button className="flex items-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
+              <div className="mt-8 flex flex-col justify-center gap-3 px-4 sm:flex-row sm:gap-4">
+                <button className="flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Descargar Ficha Técnica
                 </button>
-                <button className="flex items-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
+                <button className="flex items-center justify-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -1016,7 +1016,7 @@ export default function PerseoPcPage() {
         {activeTab === "requisitos" && (
           <div className="bg-white rounded-b-2xl">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-8 py-6 text-white">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-6 text-white sm:px-8">
               <div className="flex items-center gap-3">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -1029,7 +1029,7 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Requirements Cards */}
-            <div className="px-8 py-8">
+            <div className="px-2 py-8 sm:px-4">
               <div className="grid gap-6 lg:grid-cols-3">
                 {/* Micro / Pequeñas Empresas */}
                 <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
@@ -1249,14 +1249,14 @@ export default function PerseoPcPage() {
               </div>
 
               {/* Download Buttons */}
-              <div className="mt-8 flex justify-center gap-4">
-                <button className="flex items-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
+              <div className="mt-8 flex flex-col justify-center gap-3 px-4 sm:flex-row sm:gap-4">
+                <button className="flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Descargar Ficha Técnica
                 </button>
-                <button className="flex items-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
+                <button className="flex items-center justify-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -1271,7 +1271,7 @@ export default function PerseoPcPage() {
         {activeTab === "beneficios" && (
           <div className="bg-white rounded-b-2xl">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-8 py-6 text-white">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-6 text-white sm:px-8">
               <div className="flex items-center gap-3">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -1284,7 +1284,7 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Benefits List */}
-            <div className="px-8 py-8">
+            <div className="px-2 py-8 sm:px-4">
               <div className="grid gap-4 md:grid-cols-2">
                 {/* Benefit 1 */}
                 <div className="flex items-start gap-4 rounded-xl border border-gray-200 bg-gray-50 p-5 transition-all hover:border-orange-300 hover:bg-orange-50">
@@ -1368,14 +1368,14 @@ export default function PerseoPcPage() {
               </div>
 
               {/* Download Buttons */}
-              <div className="mt-8 flex justify-center gap-4">
-                <button className="flex items-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
+              <div className="mt-8 flex flex-col justify-center gap-3 px-4 sm:flex-row sm:gap-4">
+                <button className="flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Descargar Ficha Técnica
                 </button>
-                <button className="flex items-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
+                <button className="flex items-center justify-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -1390,7 +1390,7 @@ export default function PerseoPcPage() {
         {activeTab === "adicionales" && (
           <div className="bg-white rounded-b-2xl">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-8 py-6 text-white">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-6 text-white sm:px-8">
               <div className="flex items-center gap-3">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -1403,7 +1403,7 @@ export default function PerseoPcPage() {
             </div>
 
             {/* Additional Modules */}
-            <div className="px-8 py-8">
+            <div className="px-2 py-8 sm:px-4">
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {/* Module 1: Perseo Send WhatsApp */}
                 <div className="overflow-hidden rounded-xl border-2 border-green-300 bg-white shadow-md">
@@ -1542,14 +1542,14 @@ export default function PerseoPcPage() {
               </div>
 
               {/* Download Buttons */}
-              <div className="mt-8 flex justify-center gap-4">
-                <button className="flex items-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
+              <div className="mt-8 flex flex-col justify-center gap-3 px-4 sm:flex-row sm:gap-4">
+                <button className="flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-700">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Descargar Ficha Técnica
                 </button>
-                <button className="flex items-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
+                <button className="flex items-center justify-center gap-2 rounded-lg border-2 border-orange-600 bg-orange-800 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange-900">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
