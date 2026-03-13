@@ -7,7 +7,8 @@ import PlansSection from "@/components/sections/PlansSection";
 import MobileAppSection from "@/components/sections/MobileAppSection";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import GrowthSection from "@/components/sections/GrowthSection";
-import SectionPlaceholder from "@/components/sections/SectionPlaceholder";
+import ClientsSection from "@/components/sections/ClientsSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
 export const metadata: Metadata = {
   title: "Perseo Sistema Contable — La contabilidad que hace crecer tu negocio"
@@ -40,11 +41,11 @@ export default function HomePage() {
       {/* ── Sección 7: Cuando tú creces nosotros también ── */}
       <GrowthSection />
 
-      {/* ── Sección 8: Testimonios / videos ── */}
-      <SectionPlaceholder
-        title="Nuestros clientes nos respaldan"
-        note="Grid de videos YouTube testimonios. Pendiente."
-      />
+      {/* ── Sección 8: Clientes que confían en nosotros ── */}
+      <ClientsSection />
+
+      {/* ── Sección 9: Testimonios / videos ── */}
+      <TestimonialsSection />
     </>
   );
 }

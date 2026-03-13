@@ -16,15 +16,28 @@ export default function SiteHeader() {
       <div className="mx-auto hidden max-w-7xl items-center justify-between gap-8 px-6 py-3 md:flex">
         {/* Nav links */}
         <nav className="flex items-center gap-7 text-sm font-normal text-white/90">
-          {navigation.main.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="transition-colors hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navigation.main.map((item) => {
+            const isExternal = 'external' in item && item.external;
+            return isExternal ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="transition-colors hover:text-white"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTAs */}
@@ -112,11 +125,24 @@ export default function SiteHeader() {
         {/* Row 3: Scrollable nav */}
         <nav className="flex overflow-x-auto border-t border-white/5 px-4 py-3 text-xs text-white/70">
           <div className="flex shrink-0 items-center gap-6 whitespace-nowrap">
-            {navigation.main.map((item) => (
-              <Link key={item.href} href={item.href} className="transition-colors hover:text-white">
-                {item.label}
-              </Link>
-            ))}
+            {navigation.main.map((item) => {
+              const isExternal = 'external' in item && item.external;
+              return isExternal ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={item.href} href={item.href} className="transition-colors hover:text-white">
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </nav>
       </div>
