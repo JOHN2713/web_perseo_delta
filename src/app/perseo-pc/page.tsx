@@ -271,11 +271,6 @@ export default function PerseoPcPage() {
                   }`}
                 >
                   Compra
-                  {billingType !== "compra" && (
-                    <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
-                      OFERTA
-                    </span>
-                  )}
                 </button>
               </div>
             </div>
@@ -332,12 +327,7 @@ export default function PerseoPcPage() {
                   {/* Price */}
                   <div className="text-center mb-6">
                     {/* Show discount for Comercial plan in Compra mode */}
-                    {plan.id === "comercial" && billingType === "compra" && (
-                      <div className="flex items-center justify-center gap-2 mb-1">
-                        <span className="text-lg text-gray-400 line-through">$2500</span>
-                        <span className="text-sm font-bold text-red-600">-20%</span>
-                      </div>
-                    )}
+                    
                     <div className="text-3xl font-bold text-gray-900 mb-1">
                       $
                       {(billingType === "renta"
