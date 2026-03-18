@@ -144,7 +144,7 @@ const PLANS: Plan[] = [
     name: "Comercial",
     description: "Plan comercial completo",
     rentaPrice: 660,
-    compraPrice: 2000,
+    compraPrice: 2500,
     priceNote: "Más Iva / Anual",
     licenses: 4,
     dashboards: 60,
