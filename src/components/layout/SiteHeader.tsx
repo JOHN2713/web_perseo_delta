@@ -44,7 +44,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-3">
           {/* WhatsApp */}
           <a
-            href="https://wa.me/593999747608"
+            href="https://wa.me/593984075877"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -96,7 +96,7 @@ export default function SiteHeader() {
             Ingresar
           </a>
           <a
-            href="https://wa.me/593963095699"
+            href="https://wa.me/593984075877"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"

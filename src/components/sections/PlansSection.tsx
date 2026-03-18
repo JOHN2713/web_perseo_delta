@@ -167,7 +167,7 @@ export default function PlansSection() {
             ¿Necesitas algo diferente? Contáctanos para un plan personalizado
           </p>
           <a
-            href="https://wa.me/593963095699"
+            href="https://wa.me/593984075877"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border-2 border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50"
